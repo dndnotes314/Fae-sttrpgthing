@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fae's TTRPGames</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-purple-200 via-purple-100 to-white">
+  <header class="flex justify-between items-center p-5">
+    <h1 class="text-xl font-bold">Fae's TTRPGames</h1>
+    <div id="menu" class="text-3xl cursor-pointer">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  
+  <main class="px-5 space-y-10">
+    <!-- Blog post 2 -->
+    <article class="border-2 border-purple-600 p-5">
+      <p class="text-sm">MARCH 16, 2024</p>
+      <h2 class="text-lg font-bold mt-2 mb-4">Session 0 recap</h2>
+      <p>No excerpt found</p>
+      <a href="#" class="text-blue-600 underline">"read more"</a>
+    </article>
+
+    <!-- Blog post 1 -->
+    <article class="border-2 border-purple-600 p-5">
+      <p class="text-sm">MARCH 16, 2024</p>
+      <h2 class="text-lg font-bold mt-2 mb-4">Hello Adventurers!</h2>
+      <p>Neverwinter held by the crown king Dagult Neverember. A diverse city filled by all manner of races and unique foods through out the streets. You are all adventurers of the guild hall Call of Fates. There you met Viktor a well dressed half-elven man with slicked back parted hair. His cologne is strong, it smells of apple wood and gunmetal...</p>
+      <a href="#" class="text-blue-600 underline">"read more"</a>
+    </article>
+
+    <!-- More articles here... -->
+
+  </main>
+
+  <!-- Hamburger menu, hidden by default -->
+  <nav id="hamburgerMenu" class="fixed inset-0 bg-white bg-opacity-95 hidden">
+    <div class="p-5">
+      <div id="closeMenu" class="text-3xl text-right">
+        <i class="fas fa-times cursor-pointer"></i>
+      </div>
+      <!-- Navigation links -->
+      <ul class="mt-5">
+        <li><a href="#" class="text-lg">Players</a></li>
+        <li><a href="#" class="text-lg mt-3">Maps</a></li>
+        <li><a href="#" class="text-lg mt-3">Npcs</a></li>
+        <li><a href="calendar.html" class="text-lg mt-3">Calendar</a></li>
+        <!-- More navigation links here... -->
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('menu').addEventListener('click', function() {
+      document.getElementById('hamburgerMenu').classList.remove('hidden');
+    });
+    document.getElementById('closeMenu').addEventListener('click', function() {
+      document.getElementById('hamburgerMenu').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

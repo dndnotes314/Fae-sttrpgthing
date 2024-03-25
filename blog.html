@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="bg-purple-200">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between flex-wrap bg-purple-300 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <span class="font-semibold text-xl tracking-tight">Fae's TTRPGames</span>
+    </div>
+    <div class="block lg:hidden">
+      <button id="menu-btn" class="flex items-center px-3 py-2 border rounded text-purple-200 border-purple-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z"/></svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden" id="menu">
+      <div class="text-sm lg:flex-grow">
+        <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+          Home
+        </a>
+        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+            Players
+          </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+          Maps
+        </a>
+        <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+          Npcs
+        </a>
+        <a href="Calendar.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+            Calendar
+        </a>
+      </div>
+    </div>
+  </nav>
+    <!-- Blog post content -->
+    <div class="max-w-4xl mx-auto py-12 px-4">
+        <h1 class="text-4xl font-bold mb-6">Hello Adventurers!</h1>
+        <p class="mb-6">
+            Neverwinter held by the crown king Dagult Neverember. A diverse city filled by all manner of races and unique foods through out the streets. You are all adventurers of the guild hall Call of Fates. There you met Viktor a well dressed half-elven man with slicked back parted hair. His cologne is strong, it smells of apple wood and gunmetal. He tells you to retrieve an item known as the Obsidian Egg, before a cult gets their hands on the egg. So you a group of adventures decide to head to Dragon's Harp or also know as Stormwreck Isle. It got the nickname Stormwreck because of boats have been known to go missing around the isle.
+        </p>
+        <img src="https://media.discordapp.net/attachments/966359206724784138/1218480716065800243/mkeelv3ihvv81.jpg?ex=6607d198&is=65f55c98&hm=63a3f6485c6386988e143c764de8d0bdaa2607a9cd7771dd00b9e2180e87af49&=&format=webp&width=695&height=464" alt="Placeholder image representing a map of the fantasy world, indicating various locations and paths one might take on an adventurous quest." class="w-full h-auto mb-6">
+      </div>
+    
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+

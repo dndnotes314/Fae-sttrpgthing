@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .month {
+            margin: 5px;
+            padding: 10px;
+            flex: 0 0 calc(33.333% - 10px);
+        }
+        .month table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .month th {
+            background-color: #ddd;
+            text-align: center;
+        }
+        .month td {
+            text-align: center;
+            padding: 5px;
+            width: 14.28%;
+        }
+        .month .title {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .month .holiday {
+            background-color: #ffffa0;
+        }
+        .month .cold {
+            background-color: #a0e6ff;
+        }
+        .month .spring {
+            background-color: #a0ffd3;
+          }
+        .month .summer {
+            background-color: #ff6c8e;
+          }
+        .month .fall {
+            background-color: #ffb9a0;
+        }
+        .key {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-purple-200">
+
+    <!-- Header with Hamburger Menu -->
+    <nav class="flex items-center justify-between flex-wrap bg-purple-300 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">Calendar</span>
+        </div>
+        <div class="block lg:hidden">
+          <button id="menu-btn" class="flex items-center px-3 py-2 border rounded text-purple-200 border-purple-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z"/></svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden" id="menu">
+          <div class="text-sm lg:flex-grow">
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+              Home
+            </a>
+            <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+                Players
+              </a>
+            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+              Maps
+            </a>
+            <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+              Npcs
+            </a>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto p-4">
+      <div class="calendar">
+      <div class="month">
+      <div class="title">Hammer</div>
+        <table>
+            <tbody><tr>
+            <td class="cold">1</td>
+            <td class="cold">2</td>
+            <td class="cold">3</td>
+            <td class="cold">4</td>
+            <td class="cold">5</td>
+            <td class="cold">6</td>
+            <td class="cold">7</td>
+            <td class="cold">8</td>
+            <td class="cold">9</td>
+            <td class="cold">10</td>
+            </tr>
+            <tr>
+            <td class="cold">11</td>
+            <td class="cold">12</td>
+            <td class="cold">13</td>
+            <td class="cold">14</td>
+            <td class="cold">15</td>
+            <td class="cold">16</td>
+            <td class="cold">17</td>
+            <td class="cold">18</td>
+            <td class="cold">19</td>
+            <td class="cold">20</td>
+            </tr>
+            <tr>
+            <td class="cold">21</td>
+            <td class="cold">22</td>
+            <td class="cold">23</td>
+            <td class="cold">24</td>
+            <td class="cold">25</td>
+            <td class="cold">26</td>
+            <td class="cold">27</td>
+            <td class="cold">28</td>
+            <td class="cold">29</td>
+            <td class="cold">30</td>
+            </tr>
+           </table>
+            </div>
+              <div class="flex-1">
+           <p class="description">
+          <!-- Add your description for the month of Hammer here -->
+           </p>
+           </div>
+             </div>
+             <div class="flex">
+              <div class="flex-1">
+              <div class="calendar">
+              <div class="month">
+              <div class="title">Alturiak</div>
+                <table>
+                    <tbody><tr>
+                      <td class="cold">1</td>
+                      <td class="cold">2</td>
+                      <td class="cold">3</td>
+                      <td class="cold">4</td>
+                      <td class="cold">5</td>
+                      <td class="cold">6</td>
+                      <td class="cold">7</td>
+                      <td class="cold">8</td>
+                      <td class="cold">9</td>
+                      <td class="cold">10</td>
+                      </tr>
+                      <tr>
+                      <td class="cold">11</td>
+                      <td class="cold">12</td>
+                      <td class="cold">13</td>
+                      <td class="cold">14</td>
+                      <td class="cold">15</td>
+                      <td class="cold">16</td>
+                      <td class="cold">17</td>
+                      <td class="cold">18</td>
+                      <td class="cold">19</td>
+                      <td class="cold">20</td>
+                      </tr>
+                      <tr>
+                      <td class="cold">21</td>
+                      <td class="cold">22</td>
+                      <td class="cold">23</td>
+                      <td class="cold">24</td>
+                      <td class="cold">25</td>
+                      <td class="cold">26</td>
+                      <td class="cold">27</td>
+                      <td class="cold">28</td>
+                      <td class="cold">29</td>
+                      <td class="cold">30</td>
+                    </tr>
+                   </table>
+                    </div>
+                      <div class="flex-1">
+                   <p class="description">
+                   Add your descriptio$jsth of Hammer here
+                   </p>
+                   </div>
+                     </div>
+                     <div class="flex">
+                      <div class="flex-1">
+                      <div class="calendar">
+                      <div class="month">
+                      <div class="title">Ches</div>
+                      <table>
+                        <tbody><tr>
+                          <td class="cold">1</td>
+
+<td class="cold">2</td>
+<td class="cold">3</td>
+<td class="cold">4</td>
+<td class="cold">5</td>
+<td class="cold">6</td>
+<td class="cold">7</td>
+<td class="cold">8</td>
+<td class="cold">9</td>
+<td class="cold">10</td>
+</tr>
+<tr>
+<td class="cold">11</td>
+<td class="cold">12</td>
+<td class="cold">13</td>
+<td class="cold">14</td>
+<td class="cold">15</td>
+<td class="cold">16</td>
+<td class="cold">17</td>
+<td class="cold">18</td>
+<td class="spring">19</td>
+<td class="spring">20</td>
+</tr>
+<tr>
+<td class="spring">21</td>
+<td class="spring">22</td>
+<td class="spring">23</td>
+<td class="spring">24</td>
+<td class="spring">25</td>
+<td class="spring">26</td>
+<td class="spring">27</td>
+<td class="spring">28</td>
+<td class="spring">29</td>
+<td class="spring">30</td>
+</tr>
+</table>
+ </div>
+   <div class="flex-1">
+<p class="description">
+<!-- Add your description for the month of Hammer here -->
+</p>
+</div>
+  </div>
+  <div class="flex">
+    <div class="flex-1">
+    <div class="calendar">
+    <div class="month">
+    <div class="title">Tarsaka</div>
+    <table>
+      <tbody><tr>
+        <td class="spring">1</td>
+<td class="spring">2</td>
+<td class="spring">3</td>
+<td class="spring">4</td>
+<td class="spring">5</td>
+<td class="spring">6</td>
+<td class="spring">7</td>
+<td class="spring">8</td>
+<td class="spring">9</td>
+<td class="spring">10</td>
+</tr>
+<tr>
+<td class="spring">11</td>
+<td class="spring">12</td>
+<td class="spring">13</td>
+<td class="spring">14</td>
+<td class="spring">15</td>
+<td class="spring">16</td>
+<td class="spring">17</td>
+<td class="spring">18</td>
+<td class="spring">19</td>
+<td class="spring">20</td>
+</tr>
+<tr>
+<td class="spring">21</td>
+<td class="spring">22</td>
+<td class="spring">23</td>
+<td class="spring">24</td>
+<td class="spring">25</td>
+<td class="spring">26</td>
+<td class="spring">27</td>
+<td class="spring">28</td>
+<td class="spring">29</td>
+<td class="spring">30</td>
+</tr>
+</table>
+ </div>
+   <div class="flex-1">
+<p class="description">
+  Greengrass
+</p>
+</div>
+  </div>
+  <div class="flex">
+    <div class="flex-1">
+    <div class="calendar">
+    <div class="month">
+    <div class="title">Mirtul</div>
+    <table>
+      <tbody><tr>
+        <td class="spring">1</td>
+<td class="spring">2</td>
+<td class="spring">3</td>
+<td class="spring">4</td>
+<td class="spring">5</td>
+<td class="spring">6</td>
+<td class="spring">7</td>
+<td class="spring">8</td>
+<td class="spring">9</td>
+<td class="spring">10</td>
+</tr>
+<tr>
+<td class="spring">11</td>
+<td class="spring">12</td>
+<td class="spring">13</td>
+<td class="spring">14</td>
+<td class="spring">15</td>
+<td class="spring">16</td>
+<td class="spring">17</td>
+<td class="spring">18</td>
+<td class="spring">19</td>
+<td class="spring">20</td>
+</tr>
+<tr>
+<td class="spring">21</td>
+<td class="spring">22</td>
+<td class="spring">23</td>
+<td class="spring">24</td>
+<td class="spring">25</td>
+<td class="spring">26</td>
+<td class="spring">27</td>
+<td class="spring">28</td>
+<td class="spring">29</td>
+<td class="spring">30</td>
+</tr>
+</table>
+ </div>
+   <div class="flex-1">
+<p class="description">
+<!-- Add your description for the month of Hammer here -->
+</p>
+</div>
+  </div>
+  <div class="flex">
+    <div class="flex-1">
+    <div class="calendar">
+    <div class="month">
+    <div class="title">Kythorn</div>
+    <table>
+      <tbody><tr>
+        <td class="spring">1</td>
+        <td class="spring">2</td>
+        <td class="spring">3</td>
+        <td class="spring">4</td>
+        <td class="spring">5</td>
+        <td class="spring">6</td>
+        <td class="spring">7</td>
+        <td class="spring">8</td>
+        <td class="spring">9</td>
+        <td class="spring">10</td>
+        </tr>
+        <tr>
+        <td class="spring">11</td>
+        <td class="spring">12</td>
+        <td class="spring">13</td>
+        <td class="spring">14</td>
+        <td class="spring">15</td>
+        <td class="spring">16</td>
+        <td class="spring">17</td>
+        <td class="spring">18</td>
+        <td class="spring">19</td>
+        <td class="summer">20</td>
+      </tr>
+      <tr>
+      <td class="summer">21</td>
+      <td class="summer">22</td>
+      <td class="summer">23</td>
+      <td class="summer">24</td>
+      <td class="summer">25</td>
+      <td class="summer">26</td>
+      <td class="summer">27</td>
+      <td class="summer">28</td>
+      <td class="summer">29</td>
+      <td class="summer">30</td>
+    </tr>
+  </table>
+   </div>
+     <div class="flex-1">
+  <p class="description">
+  <!-- Add your description for the month of Hammer here -->
+  </p>
+  </div>
+    </div>
+    <div class="flex">
+      <div class="flex-1">
+      <div class="calendar">
+      <div class="month">
+      <div class="title">Flamerule</div>
+      <table>
+        <tbody><tr>
+          <td class="summer">1</td>
+          <td class="summer">2</td>
+          <td class="summer">3</td>
+          <td class="summer">4</td>
+          <td class="summer">5</td>
+          <td class="summer">6</td>
+          <td class="summer">7</td>
+          <td class="summer">8</td>
+          <td class="summer">9</td>
+          <td class="summer">10</td>
+          </tr>
+          <tr>
+          <td class="summer">11</td>
+          <td class="summer">12</td>
+          <td class="summer">13</td>
+          <td class="summer">14</td>
+          <td class="summer">15</td>
+          <td class="summer">16</td>
+          <td class="summer">17</td>
+          <td class="summer">18</td>
+          <td class="summer">19</td>
+          <td class="summer">20</td>
+          </tr>
+          <tr>
+          <td class="summer">21</td>
+          <td class="summer">22</td>
+          <td class="summer">23</td>
+          <td class="summer">24</td>
+          <td class="summer">25</td>
+          <td class="summer">26</td>
+          <td class="summer">27</td>
+          <td class="summer">28</td>
+          <td class="summer">29</td>
+          <td class="summer">30</td>
+        </tr>
+      </table>
+       </div>
+         <div class="flex-1">
+      <p class="description">
+      <!-- Add your description for the month of Hammer here -->
+      </p>
+      </div>
+        </div>
+        <div class="flex">
+          <div class="flex-1">
+          <div class="calendar">
+          <div class="month">
+          <div class="title">Eleasias</div>
+          <table>
+            <tbody><tr>
+              <td class="summer">1</td>
+              <td class="summer">2</td>
+              <td class="summer">3</td>
+              <td class="summer">4</td>
+              <td class="summer">5</td>
+              <td class="summer">6</td>
+              <td class="summer">7</td>
+              <td class="summer">8</td>
+              <td class="summer">9</td>
+              <td class="summer">10</td>
+              </tr>
+              <tr>
+              <td class="summer">11</td>
+              <td class="summer">12</td>
+              <td class="summer">13</td>
+              <td class="summer">14</td>
+              <td class="summer">15</td>
+              <td class="summer">16</td>
+              <td class="summer">17</td>
+              <td class="summer">18</td>
+              <td class="summer">19</td>
+              <td class="summer">20</td>
+              </tr>
+              <tr>
+              <td class="summer">21</td>
+              <td class="summer">22</td>
+              <td class="summer">23</td>
+              <td class="summer">24</td>
+              <td class="summer">25</td>
+              <td class="summer">26</td>
+              <td class="summer">27</td>
+              <td class="summer">28</td>
+              <td class="summer">29</td>
+              <td class="summer">30</td>
+            </tr>
+          </table>
+           </div>
+             <div class="flex-1">
+          <p class="description">
+          <!-- Add your description for the month of Hammer here -->
+          </p>
+          </div>
+            </div>
+            <div class="flex">
+              <div class="flex-1">
+              <div class="calendar">
+              <div class="month">
+              <div class="title">Eleint</div>
+              <table>
+                <tbody><tr>
+                  <td class="summer">1</td>
+                  <td class="summer">2</td>
+                  <td class="summer">3</td>
+                  <td class="summer">4</td>
+                  <td class="summer">5</td>
+                  <td class="summer">6</td>
+                  <td class="summer">7</td>
+                  <td class="summer">8</td>
+                  <td class="summer">9</td>
+                  <td class="summer">10</td>
+                  </tr>
+                  <tr>
+                  <td class="summer">11</td>
+                  <td class="summer">12</td>
+                  <td class="summer">13</td>
+                  <td class="summer">14</td>
+                  <td class="summer">15</td>
+                  <td class="summer">16</td>
+                  <td class="summer">17</td>
+                  <td class="summer">18</td>
+                  <td class="summer">19</td>
+                  <td class="summer">20</td>
+                  </tr>
+                  <tr>
+                  <td class="fall">21</td>
+                  <td class="fall">22</td>
+                  <td class="fall">23</td>
+                  <td class="fall">24</td>
+                  <td class="fall">25</td>
+                  <td class="fall">26</td>
+                  <td class="fall">27</td>
+                  <td class="fall">28</td>
+                  <td class="fall">29</td>
+                  <td class="fall">30</td>
+                </tr>
+              </table>
+               </div>
+                 <div class="flex-1">
+              <p class="description">
+              <!-- Add your description for the month of Hammer here -->
+              </p>
+              </div>
+                </div>
+                <div class="flex">
+                  <div class="flex-1">
+                  <div class="calendar">
+                  <div class="month">
+                  <div class="title">Marpenoth</div>
+                  <table>
+                    <tbody><tr>
+                      <td class="fall">1</td>
+                      <td class="fall">2</td>
+                      <td class="fall">3</td>
+                      <td class="fall">4</td>
+                      <td class="fall">5</td>
+                      <td class="fall">6</td>
+                      <td class="fall">7</td>
+                      <td class="fall">8</td>
+                      <td class="fall">9</td>
+                      <td class="fall">10</td>
+                      </tr>
+                      <tr>
+                      <td class="fall">11</td>
+                      <td class="fall">12</td>
+                      <td class="fall">13</td>
+                      <td class="fall">14</td>
+                      <td class="fall">15</td>
+                      <td class="fall">16</td>
+                      <td class="fall">17</td>
+                      <td class="fall">18</td>
+                      <td class="fall">19</td>
+                      <td class="fall">20</td>
+                      </tr>
+                      <tr>
+                      <td class="fall">21</td>
+                      <td class="fall">22</td>
+                      <td class="fall">23</td>
+                      <td class="fall">24</td>
+                      <td class="fall">25</td>
+                      <td class="fall">26</td>
+                      <td class="fall">27</td>
+                      <td class="fall">28</td>
+                      <td class="fall">29</td>
+                      <td class="fall">30</td>
+                    </tr>
+                  </table>
+                   </div>
+                     <div class="flex-1">
+                  <p class="description">
+                  <!-- Add your description for the month of Hammer here -->
+                  </p>
+                  </div>
+                    </div>
+                    <div class="flex">
+                      <div class="flex-1">
+                      <div class="calendar">
+                      <div class="month">
+                      <div class="title">Uktar</div>
+                      <table>
+                        <tbody><tr>
+                          <td class="fall">1</td>
+                          <td class="fall">2</td>
+                          <td class="fall">3</td>
+                          <td class="fall">4</td>
+                          <td class="fall">5</td>
+                          <td class="fall">6</td>
+                          <td class="fall">7</td>
+                          <td class="fall">8</td>
+                          <td class="fall">9</td>
+                          <td class="fall">10</td>
+                          </tr>
+                          <tr>
+                          <td class="fall">11</td>
+                          <td class="fall">12</td>
+                          <td class="fall">13</td>
+                          <td class="fall">14</td>
+                          <td class="fall">15</td>
+                          <td class="fall">16</td>
+                          <td class="fall">17</td>
+                          <td class="fall">18</td>
+                          <td class="fall">19</td>
+                          <td class="fall">20</td>
+                          </tr>
+                          <tr>
+                          <td class="fall">21</td>
+                          <td class="fall">22</td>
+                          <td class="fall">23</td>
+                          <td class="fall">24</td>
+                          <td class="fall">25</td>
+                          <td class="fall">26</td>
+                          <td class="fall">27</td>
+                          <td class="fall">28</td>
+                          <td class="fall">29</td>
+                          <td class="fall">30</td>
+                        </tr>
+                      </table>
+                       </div>
+                         <div class="flex-1">
+                      <p class="description">
+                      <!-- Add your description for the month of Hammer here -->
+                      </p>
+                      </div>
+                        </div>
+                        <div class="flex">
+                          <div class="flex-1">
+                          <div class="calendar">
+                          <div class="month">
+                          <div class="title">Nightal</div>
+                          <table>
+                            <tbody><tr>
+                              <td class="fall">1</td>
+                              <td class="fall">2</td>
+                              <td class="fall">3</td>
+                              <td class="fall">4</td>
+                              <td class="fall">5</td>
+                              <td class="fall">6</td>
+                              <td class="fall">7</td>
+                              <td class="fall">8</td>
+                              <td class="fall">9</td>
+                              <td class="fall">10</td>
+                              </tr>
+                              <tr>
+                              <td class="fall">11</td>
+                              <td class="fall">12</td>
+                              <td class="fall">13</td>
+                              <td class="fall">14</td>
+                              <td class="fall">15</td>
+                              <td class="fall">16</td>
+                              <td class="fall">17</td>
+                              <td class="fall">18</td>
+                              <td class="fall">19</td>
+                              <td class="cold">20</td>
+                              </tr>
+                              <tr>
+                              <td class="cold">21</td>
+                              <td class="cold">22</td>
+                              <td class="cold">23</td>
+                              <td class="cold">24</td>
+                              <td class="cold">25</td>
+                              <td class="cold">26</td>
+                              <td class="cold">27</td>
+                              <td class="cold">28</td>
+                              <td class="cold">29</td>
+                              <td class="cold">30</td>
+                            </div>
+                            <div class="flex-1">
+                         <p class="description">
+                         <!-- Add your description for the month of Hammer here -->
+                         </p>
+                         </div>
