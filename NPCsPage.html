@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Post</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+      
+            menuBtn.addEventListener('click', () => {
+              menu.classList.toggle('hidden');
+            });
+          });
+        </script>
+      </head>
+      <body class="bg-purple-200">
+        <!-- Navbar -->
+        <nav class="flex items-center justify-between flex-wrap bg-purple-300 p-6">
+          <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-semibold text-xl tracking-tight">NPCs</span>
+          </div>
+          <div class="block lg:hidden">
+            <button id="menu-btn" class="flex items-center px-3 py-2 border rounded text-purple-200 border-purple-400 hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z"/></svg>
+            </button>
+          </div>
+          <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden" id="menu">
+            <div class="text-sm lg:flex-grow">
+              <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+                Home
+              </a>
+              <a href="" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+                  Players
+                </a>
+              <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+                Maps
+              </a>
+              <a href="Calendar.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-200 hover:text-white mr-4">
+                  Calendar
+              </a>
+            </div>
+          </div>
+        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPC Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .npc-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .align-left {
+            justify-content: flex-start;
+        }
+        .align-right {
+            justify-content: flex-end;
+        }
+        .npc {
+            margin: 5px;
+            padding: 10px;
+            flex: 0 0 calc(50% - 10px);
+            box-sizing: border-box;
+        }
+        .npc .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .read-more {
+            color: #5b21b6;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-purple-200">
+    <!-- NPC Content aligned to the left -->
+    <div class="npc-container align-left">
+        <!-- NPC Example -->
+        <div class="npc bg-white p-6 rounded-lg shadow-md">
+            <h2 class="title">NPC Name</h2>
+            <p class="description">
+                Brief description of the NPC. This might include important details such as their role in the story, any particular quirks they have, or background information that is relevant for players.
+            </p>
+            <a href="npc-details.html" class="read-more">Read more...</a>
+        </div>
+        <!-- Repeat for each NPC -->
+    </div>
+    <div class="npc-container align-right">
+        <!-- NPC Example -->
+        <div class="npc bg-white p-6 rounded-lg shadow-md">
+            <h2 class="title">NPC Name</h2>
+            <p class="description">
+                Brief description of the NPC. This might include important details such as their role in the story, any particular quirks they have, or background information that is relevant for players.
+            </p>
+            <a href="npc-details.html" class="read-more">Read more...</a>
+        </div>
+        <!-- Repeat for each NPC -->
+    </div>
+    <!-- Optional: NPC Content aligned to the right -->
+    <!-- <div class="npc-container align-right"> -->
+    <!-- Additional NPCs here aligned to the right -->
+    <!-- </div> -->
+</body>
+</html>
+
